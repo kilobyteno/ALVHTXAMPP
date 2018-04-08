@@ -14,6 +14,7 @@ Public Class main
         tbWebPort.Enabled = False
         btnAdd.Enabled = False
         pbWorking.Visible = True
+
         Try
 
             If Not IO.Directory.Exists(tbXAMPPLocation.Text) Then
@@ -59,25 +60,25 @@ Public Class main
             End If
 
             If tbLaravelLocation.Text = Nothing Then
-                MsgBox("You must define the laravel public folder location", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
+                MsgBox("You must define the Laravel public folder location", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
                 msgBoxShown = True
                 Exit Try
             End If
 
             If tbLaravelLocation.Text.EndsWith("/public") = False Then
-                MsgBox("You must define the laravel public folder location", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
+                MsgBox("You must define the Laravel public folder location", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
                 msgBoxShown = True
                 Exit Try
             End If
 
             If tbWebPort.Text = Nothing Then
-                MsgBox("You must define the laravel public folder location", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
+                MsgBox("You must define a port. If unsure; use port 80", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
                 msgBoxShown = True
                 Exit Try
             End If
 
             If Not Regex.IsMatch(tbWebPort.Text, "^[0-9]+$") Then
-                MsgBox("You must define a port numbers", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
+                MsgBox("You must define port numbers as integer", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
                 msgBoxShown = True
                 Exit Try
             End If
@@ -92,7 +93,7 @@ Public Class main
 
             Using sw As IO.StreamWriter = IO.File.AppendText(My.Computer.FileSystem.SpecialDirectories.Desktop & "\hosts")
                 sw.WriteLine("")
-                sw.WriteLine("127.0.0.1 " & tbDomainName.Text & ".dev")
+                sw.WriteLine("127.0.0.1 " & tbDomainName.Text & cbTLD.SelectedItem.ToString)
             End Using
 
             IO.File.Copy(My.Computer.FileSystem.SpecialDirectories.Desktop & "\hosts", "C:\Windows\System32\drivers\etc\hosts", True)
@@ -101,9 +102,9 @@ Public Class main
             Using sw As IO.StreamWriter = IO.File.AppendText(tbXAMPPLocation.Text & "\apache\conf\extra\httpd-vhosts.conf")
                 sw.WriteLine("")
                 sw.WriteLine("")
-                sw.WriteLine("<VirtualHost " & tbDomainName.Text & ".dev:" & tbWebPort.Text & ">")
+                sw.WriteLine("<VirtualHost " & tbDomainName.Text & cbTLD.SelectedItem.ToString & ":" & tbWebPort.Text & ">")
                 sw.WriteLine("  DocumentRoot """ & tbLaravelLocation.Text & """")
-                sw.WriteLine("  ServerName " & tbDomainName.Text & ".dev")
+                sw.WriteLine("  ServerName " & tbDomainName.Text & cbTLD.SelectedItem.ToString)
                 sw.WriteLine("  <Directory """ & tbLaravelLocation.Text & """>")
                 sw.WriteLine("      Require all granted")
                 sw.WriteLine("      AllowOverride All")
@@ -129,10 +130,11 @@ Public Class main
             tbWebPort.Enabled = True
             btnAdd.Enabled = True
             pbWorking.Visible = False
+            cbTLD.SelectedIndex = 0
             tbLaravelLocation.Text = ""
             tbDomainName.Text = ""
-            tbWebPort.Text = ""
-            tbLaravelLocation.Text = "C:\xampp"
+            tbWebPort.Text = "80"
+            tbXAMPPLocation.Text = "C:\xampp"
             If msgBoxShown = False Then
                 MsgBox("Files has been written. And Apache service has been restarted!", MsgBoxStyle.Information Or MsgBoxStyle.OkOnly)
             End If
@@ -149,6 +151,7 @@ Public Class main
     End Sub
 
     Private Sub main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cbTLD.SelectedIndex = 0
         If isRunAsAdmin = False Then
             MsgBox("This application needs to be started as an administrator to get access to do all the changes to files and services.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly)
             tsslAdmin.Text = "Start application as admin!"

@@ -29,7 +29,6 @@ Partial Class main
         Me.tbLaravelLocation = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLaravelLocation = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ServiceController1 = New System.ServiceProcess.ServiceController()
         Me.btnXAMPPLocation = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -40,13 +39,15 @@ Partial Class main
         Me.tsslAdmin = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pbWorking = New System.Windows.Forms.ProgressBar()
+        Me.cbTLD = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAdd
         '
         Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(333, 65)
+        Me.btnAdd.Location = New System.Drawing.Point(366, 68)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 0
@@ -55,16 +56,16 @@ Partial Class main
         '
         'tbDomainName
         '
-        Me.tbDomainName.Location = New System.Drawing.Point(152, 66)
+        Me.tbDomainName.Location = New System.Drawing.Point(152, 68)
         Me.tbDomainName.Name = "tbDomainName"
-        Me.tbDomainName.Size = New System.Drawing.Size(89, 22)
+        Me.tbDomainName.Size = New System.Drawing.Size(101, 22)
         Me.tbDomainName.TabIndex = 1
         Me.tbDomainName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(64, 69)
+        Me.Label1.Location = New System.Drawing.Point(64, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 2
@@ -75,13 +76,13 @@ Partial Class main
         Me.tbLaravelLocation.Location = New System.Drawing.Point(152, 40)
         Me.tbLaravelLocation.Name = "tbLaravelLocation"
         Me.tbLaravelLocation.ReadOnly = True
-        Me.tbLaravelLocation.Size = New System.Drawing.Size(175, 22)
+        Me.tbLaravelLocation.Size = New System.Drawing.Size(208, 22)
         Me.tbLaravelLocation.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 43)
+        Me.Label2.Location = New System.Drawing.Point(12, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 13)
         Me.Label2.TabIndex = 4
@@ -89,25 +90,16 @@ Partial Class main
         '
         'btnLaravelLocation
         '
-        Me.btnLaravelLocation.Location = New System.Drawing.Point(333, 39)
+        Me.btnLaravelLocation.Location = New System.Drawing.Point(366, 40)
         Me.btnLaravelLocation.Name = "btnLaravelLocation"
         Me.btnLaravelLocation.Size = New System.Drawing.Size(75, 23)
         Me.btnLaravelLocation.TabIndex = 5
         Me.btnLaravelLocation.Text = "Browse..."
         Me.btnLaravelLocation.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(247, 69)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = ".dev:"
-        '
         'btnXAMPPLocation
         '
-        Me.btnXAMPPLocation.Location = New System.Drawing.Point(333, 11)
+        Me.btnXAMPPLocation.Location = New System.Drawing.Point(366, 10)
         Me.btnXAMPPLocation.Name = "btnXAMPPLocation"
         Me.btnXAMPPLocation.Size = New System.Drawing.Size(75, 23)
         Me.btnXAMPPLocation.TabIndex = 9
@@ -128,15 +120,15 @@ Partial Class main
         Me.tbXAMPPLocation.Location = New System.Drawing.Point(152, 12)
         Me.tbXAMPPLocation.Name = "tbXAMPPLocation"
         Me.tbXAMPPLocation.ReadOnly = True
-        Me.tbXAMPPLocation.Size = New System.Drawing.Size(175, 22)
+        Me.tbXAMPPLocation.Size = New System.Drawing.Size(208, 22)
         Me.tbXAMPPLocation.TabIndex = 7
         Me.tbXAMPPLocation.Text = "C:\xampp"
         '
         'tbWebPort
         '
-        Me.tbWebPort.Location = New System.Drawing.Point(281, 66)
+        Me.tbWebPort.Location = New System.Drawing.Point(324, 68)
         Me.tbWebPort.Name = "tbWebPort"
-        Me.tbWebPort.Size = New System.Drawing.Size(46, 22)
+        Me.tbWebPort.Size = New System.Drawing.Size(36, 22)
         Me.tbWebPort.TabIndex = 10
         Me.tbWebPort.Text = "80"
         '
@@ -145,7 +137,7 @@ Partial Class main
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsslVersion, Me.tsslAdmin, Me.ToolStripStatusLabel3})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 97)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(420, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(453, 22)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -161,7 +153,7 @@ Partial Class main
         Me.tsslAdmin.ActiveLinkColor = System.Drawing.Color.White
         Me.tsslAdmin.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.tsslAdmin.Name = "tsslAdmin"
-        Me.tsslAdmin.Size = New System.Drawing.Size(205, 17)
+        Me.tsslAdmin.Size = New System.Drawing.Size(238, 17)
         Me.tsslAdmin.Spring = True
         '
         'ToolStripStatusLabel3
@@ -171,29 +163,49 @@ Partial Class main
         Me.ToolStripStatusLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
         Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(112, 17)
-        Me.ToolStripStatusLabel3.Text = "© 2015-2017 Infihex"
+        Me.ToolStripStatusLabel3.Text = "© 2015-2018 Infihex"
         '
         'pbWorking
         '
         Me.pbWorking.Location = New System.Drawing.Point(0, 0)
         Me.pbWorking.Name = "pbWorking"
-        Me.pbWorking.Size = New System.Drawing.Size(420, 5)
+        Me.pbWorking.Size = New System.Drawing.Size(453, 5)
         Me.pbWorking.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.pbWorking.TabIndex = 12
         Me.pbWorking.Visible = False
+        '
+        'cbTLD
+        '
+        Me.cbTLD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTLD.FormattingEnabled = True
+        Me.cbTLD.Items.AddRange(New Object() {".io", ".dev", ".test", ".xyz"})
+        Me.cbTLD.Location = New System.Drawing.Point(259, 68)
+        Me.cbTLD.Name = "cbTLD"
+        Me.cbTLD.Size = New System.Drawing.Size(49, 21)
+        Me.cbTLD.TabIndex = 13
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(311, 73)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(10, 13)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = ":"
         '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(420, 119)
+        Me.ClientSize = New System.Drawing.Size(453, 119)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.cbTLD)
         Me.Controls.Add(Me.pbWorking)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.tbWebPort)
         Me.Controls.Add(Me.btnXAMPPLocation)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.tbXAMPPLocation)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnLaravelLocation)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbLaravelLocation)
@@ -220,7 +232,6 @@ Partial Class main
     Friend WithEvents tbLaravelLocation As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnLaravelLocation As System.Windows.Forms.Button
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ServiceController1 As System.ServiceProcess.ServiceController
     Friend WithEvents btnXAMPPLocation As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -231,4 +242,6 @@ Partial Class main
     Friend WithEvents tsslAdmin As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents pbWorking As ProgressBar
+    Friend WithEvents cbTLD As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Add Laravel Virtual Host To XAMPP")> 
 <Assembly: AssemblyCompany("Infihex")> 
 <Assembly: AssemblyProduct("ALVHTXAMPP")>
-<Assembly: AssemblyCopyright("© 2015 - 2017, Infihex")>
+<Assembly: AssemblyCopyright("© 2015-2018, Infihex")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("0.1.2.109")>
-<Assembly: AssemblyFileVersion("0.1.2.109")>
+<Assembly: AssemblyVersion("0.2.0.201")>
+<Assembly: AssemblyFileVersion("0.2.0.201")>
