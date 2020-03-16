@@ -162,6 +162,7 @@ Public Class main
             tsslAdmin.Font = New Font("Segoe UI", 9, FontStyle.Italic)
         End If
         tsslVersion.Text = My.Application.Info.Version.Major.ToString & "." & My.Application.Info.Version.Minor.ToString & "." & My.Application.Info.Version.Build.ToString & " Build " & My.Application.Info.Version.Revision.ToString
+        tsslCopyright.Text = My.Application.Info.Copyright
     End Sub
 
     Private Sub btnXAMPPLocation_Click(sender As Object, e As EventArgs) Handles btnXAMPPLocation.Click
@@ -173,7 +174,7 @@ Public Class main
         End If
     End Sub
 
-    Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel3.Click
+    Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles tsslCopyright.Click
         Process.Start("https://www.infihex.com/")
     End Sub
 

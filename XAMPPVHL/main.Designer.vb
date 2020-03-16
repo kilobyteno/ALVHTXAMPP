@@ -37,7 +37,7 @@ Partial Class main
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tsslVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tsslAdmin = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tsslCopyright = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pbWorking = New System.Windows.Forms.ProgressBar()
         Me.cbTLD = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class main
         '
         Me.tbDomainName.Location = New System.Drawing.Point(152, 68)
         Me.tbDomainName.Name = "tbDomainName"
-        Me.tbDomainName.Size = New System.Drawing.Size(101, 22)
+        Me.tbDomainName.Size = New System.Drawing.Size(101, 26)
         Me.tbDomainName.TabIndex = 1
         Me.tbDomainName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -67,7 +67,7 @@ Partial Class main
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(64, 73)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
+        Me.Label1.Size = New System.Drawing.Size(100, 19)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Domain Name:"
         '
@@ -76,7 +76,7 @@ Partial Class main
         Me.tbLaravelLocation.Location = New System.Drawing.Point(152, 40)
         Me.tbLaravelLocation.Name = "tbLaravelLocation"
         Me.tbLaravelLocation.ReadOnly = True
-        Me.tbLaravelLocation.Size = New System.Drawing.Size(208, 22)
+        Me.tbLaravelLocation.Size = New System.Drawing.Size(208, 26)
         Me.tbLaravelLocation.TabIndex = 3
         '
         'Label2
@@ -84,7 +84,7 @@ Partial Class main
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(12, 45)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 13)
+        Me.Label2.Size = New System.Drawing.Size(161, 19)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Laravel ""Public"" Location:"
         '
@@ -111,7 +111,7 @@ Partial Class main
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(54, 15)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.Size = New System.Drawing.Size(114, 19)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "XAMPP Location:"
         '
@@ -120,7 +120,7 @@ Partial Class main
         Me.tbXAMPPLocation.Location = New System.Drawing.Point(152, 12)
         Me.tbXAMPPLocation.Name = "tbXAMPPLocation"
         Me.tbXAMPPLocation.ReadOnly = True
-        Me.tbXAMPPLocation.Size = New System.Drawing.Size(208, 22)
+        Me.tbXAMPPLocation.Size = New System.Drawing.Size(208, 26)
         Me.tbXAMPPLocation.TabIndex = 7
         Me.tbXAMPPLocation.Text = "C:\xampp"
         '
@@ -128,16 +128,17 @@ Partial Class main
         '
         Me.tbWebPort.Location = New System.Drawing.Point(324, 68)
         Me.tbWebPort.Name = "tbWebPort"
-        Me.tbWebPort.Size = New System.Drawing.Size(36, 22)
+        Me.tbWebPort.Size = New System.Drawing.Size(36, 26)
         Me.tbWebPort.TabIndex = 10
         Me.tbWebPort.Text = "80"
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsslVersion, Me.tsslAdmin, Me.ToolStripStatusLabel3})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 97)
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsslVersion, Me.tsslAdmin, Me.tsslCopyright})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 94)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(453, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(453, 25)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -145,7 +146,7 @@ Partial Class main
         'tsslVersion
         '
         Me.tsslVersion.Name = "tsslVersion"
-        Me.tsslVersion.Size = New System.Drawing.Size(88, 17)
+        Me.tsslVersion.Size = New System.Drawing.Size(113, 20)
         Me.tsslVersion.Text = "0.0.0 Build 0000"
         '
         'tsslAdmin
@@ -153,17 +154,17 @@ Partial Class main
         Me.tsslAdmin.ActiveLinkColor = System.Drawing.Color.White
         Me.tsslAdmin.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.tsslAdmin.Name = "tsslAdmin"
-        Me.tsslAdmin.Size = New System.Drawing.Size(238, 17)
+        Me.tsslAdmin.Size = New System.Drawing.Size(216, 20)
         Me.tsslAdmin.Spring = True
         '
-        'ToolStripStatusLabel3
+        'tsslCopyright
         '
-        Me.ToolStripStatusLabel3.ActiveLinkColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel3.IsLink = True
-        Me.ToolStripStatusLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(112, 17)
-        Me.ToolStripStatusLabel3.Text = "© 2015-2018 Infihex"
+        Me.tsslCopyright.ActiveLinkColor = System.Drawing.Color.White
+        Me.tsslCopyright.IsLink = True
+        Me.tsslCopyright.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tsslCopyright.Name = "tsslCopyright"
+        Me.tsslCopyright.Size = New System.Drawing.Size(70, 20)
+        Me.tsslCopyright.Text = "© Infihex"
         '
         'pbWorking
         '
@@ -178,10 +179,10 @@ Partial Class main
         '
         Me.cbTLD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTLD.FormattingEnabled = True
-        Me.cbTLD.Items.AddRange(New Object() {".io", ".dev", ".test", ".xyz"})
+        Me.cbTLD.Items.AddRange(New Object() {".io", ".dev", ".test", ".xyz", ".com", ".no", ".se", ".dk", ".de", ".fr"})
         Me.cbTLD.Location = New System.Drawing.Point(259, 68)
         Me.cbTLD.Name = "cbTLD"
-        Me.cbTLD.Size = New System.Drawing.Size(49, 21)
+        Me.cbTLD.Size = New System.Drawing.Size(49, 27)
         Me.cbTLD.TabIndex = 13
         '
         'Label3
@@ -189,13 +190,13 @@ Partial Class main
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(311, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(10, 13)
+        Me.Label3.Size = New System.Drawing.Size(12, 19)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = ":"
         '
         'main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(453, 119)
         Me.Controls.Add(Me.Label3)
@@ -240,7 +241,7 @@ Partial Class main
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents tsslVersion As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents tsslAdmin As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents tsslCopyright As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents pbWorking As ProgressBar
     Friend WithEvents cbTLD As ComboBox
     Friend WithEvents Label3 As Label
