@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("ALVHTXAMPP")> 
-<Assembly: AssemblyDescription("Add Laravel Virtual Host To XAMPP")> 
-<Assembly: AssemblyCompany("Infihex")> 
+<Assembly: AssemblyDescription("Add Laravel Virtual Host To XAMPP")>
+<Assembly: AssemblyCompany("Kilobyte AS")>
 <Assembly: AssemblyProduct("ALVHTXAMPP")>
-<Assembly: AssemblyCopyright("© 2015-2020 Infihex")>
+<Assembly: AssemblyCopyright("© 2022 Kilobyte AS")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("0.2.1.220")>
-<Assembly: AssemblyFileVersion("0.2.1.220")>
+<Assembly: AssemblyVersion("0.2.2.223")>
+<Assembly: AssemblyFileVersion("0.2.2.223")>

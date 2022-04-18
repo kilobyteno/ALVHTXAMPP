@@ -175,7 +175,7 @@ Public Class main
     End Sub
 
     Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles tsslCopyright.Click
-        Process.Start("https://www.infihex.com/")
+        Process.Start("https://www.kilobyte.no/")
     End Sub
 
     Private Sub tsslAdmin_Click(sender As Object, e As EventArgs) Handles tsslAdmin.Click

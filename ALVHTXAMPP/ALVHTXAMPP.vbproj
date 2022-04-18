@@ -11,10 +11,10 @@
     <AssemblyName>ALVHTXAMPP</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>ftp://ftp.infihex.com/public_html/dev/ALVHTXAMPP/install/</PublishUrl>
+    <PublishUrl>ftp://ftp.kilobyte.no/ALVHTXAMPP/install/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -24,17 +24,17 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <InstallUrl>https://infihex.com/dev/ALVHTXAMPP/install/</InstallUrl>
-    <SupportUrl>https://my.infihex.com/</SupportUrl>
+    <InstallUrl>https://app.kilobyte.no/ALVHTXAMPP/install/</InstallUrl>
+    <SupportUrl>https://www.kilobyte.no/</SupportUrl>
     <TargetCulture>en</TargetCulture>
     <ProductName>ALVHTXAMPP</ProductName>
-    <PublisherName>Infihex</PublisherName>
-    <MinimumRequiredVersion>0.2.0.200</MinimumRequiredVersion>
+    <PublisherName>Kilobyte AS</PublisherName>
+    <MinimumRequiredVersion>0.2.2.223</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>221</ApplicationRevision>
-    <ApplicationVersion>0.2.1.%2a</ApplicationVersion>
+    <ApplicationRevision>223</ApplicationRevision>
+    <ApplicationVersion>0.2.2.223</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -75,10 +75,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>infihex_hexacube_whitecenter.ico</ApplicationIcon>
+    <ApplicationIcon>kilobyte.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B8A1DD0A3CF73A9CDB4CD11E1C6CA5DD1678B99D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>527C1EBF1FE62E60C80BB2A1B32F657EED1191E9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>ALVHTXAMPP_TemporaryKey.pfx</ManifestKeyFile>
@@ -96,10 +96,11 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ALVHTXAMPP.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -137,6 +138,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -161,7 +163,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ALVHTXAMPP.snk" />
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -175,12 +176,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="infihex_hexacube_whitecenter.ico" />
+    <Content Include="kilobyte.ico" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
